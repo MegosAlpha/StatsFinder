@@ -9,11 +9,6 @@ getlowerq <- function(ds) {
 getupperq <- function(ds) {
     quantile(ds)[4]
 }
-getiqr <- function(ds) {
-    lowerq <- quantile(ds)[2]
-    upperq <- quantile(ds)[4]
-    upperq - lowerq
-}
 #returns Mild Upper, Mild Lower, Extreme Upper, Extreme Lower.
 getoutliers <- function(ds) {
     iqr <- IQR(ds)
